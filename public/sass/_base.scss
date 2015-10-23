@@ -1,0 +1,43 @@
+/* Général rules*/
+
+@font-face {
+  font-family: titleFont;
+  src: url("../font/Mohave/Mohave-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Myname;
+  src: url("../font/DEFTONE.ttf");
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: titleFont,Arial,sans-serif;
+}
+
+p,span,a {
+  font-family: sanchez,Arial,sans-serif;
+}
+
+li>a{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  padding: 10px 0px;
+}
+
+span#Myname{
+  font-family: Myname,Arial,sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+h1 { font-size: 35px; line-height: 40px; }
+h2 { font-size: 30px; line-height: 37px; }
+h3 { font-size: 27px; line-height: 33px; }
+h4 { font-size: 24px; line-height: 30px; font-weight: 300; }
+h5 { font-size: 20px; line-height: 28px; font-weight: 300; }
+h6 { font-size: 17px; line-height: 25px; font-weight: 300; }

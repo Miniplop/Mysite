@@ -1,0 +1,319 @@
+@import "_loader";
+@import "_base";
+
+html{
+
+  //Pie
+  .chart{
+    canvas {
+      display: block;
+      position:relative;
+      top: 0;
+      left: 0;
+    }
+
+    span {
+      color:#555;
+      position: relative;
+      display:block;
+      line-height:220px;
+      text-align:center;
+      width:220px;
+      font-family:sans-serif;
+      font-size:40px;
+      font-weight:100;
+      margin-left:5px;
+    }
+  }
+
+  body{
+
+    .section{
+      width: 100%;
+
+      .section-head{
+
+        h3{
+          text-align: center;
+          line-height: 33px;
+          font-weight: 300;
+          overflow: hidden;
+          margin-bottom: 80px;
+          text-transform: capitalize;
+        }
+
+
+        .section-title{
+
+          h1{
+            font-size: 50px;
+            line-height: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            text-transform: capitalize;
+            position: relative;
+            overflow: hidden;
+          }
+
+          h1::after{
+            bottom: 0;
+            left: 50%;
+            height: 2px;
+            content: "";
+            width: 100px;
+            margin-left: -50px;
+            position: absolute;
+            background-color: #C03B44 ;
+          }
+        }
+      }
+
+    }
+
+    /* Header rules*/
+
+    #header-section{
+      transition: all 0.3s ease-in-out 0s;
+      z-index: 999;
+      background-color: transparent;
+      position: fixed;
+      top: 0px;
+      color: #ffffff;
+
+      ul.nav{
+        padding: 15px;
+      }
+      .navbar-header{
+        padding-top: 15px;
+      }
+
+      a{
+        color: #ffffff;
+      }
+
+      a:hover{
+        background-color: transparent;
+        color:#C03B44 ;
+      }
+    }
+
+    /*---------------------------------------------*/
+    /*Home Section */
+    #home-section{
+      position: relative;
+      overflow: hidden;
+      background-image: url("../images/bg.jpg");
+      background-size: cover;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      height: 600px;
+
+
+      #home-container{
+        position: relative;
+        padding-top: 300px;
+        text-align: center;
+        #myname{
+          h1{
+            color: #ffffff;
+            font-size: 70px;
+          }
+        }
+        #mydescription{
+          margin-bottom: 50px;
+          color: #ffffff;
+        }
+        #button-myservice{
+          a{
+            color: #ffffff;
+            border: 2px solid #FFF;
+            transition: all 0.3s ease-in-out 0s;
+          }
+          a:hover{
+            background: #ffffff;
+            color: #000000;
+          }
+        }
+      }
+    }
+    /* #END Home section*/
+    /*-------------------------------------------------*/
+
+    /*---------------------------------------------*/
+    /*Service Section */
+
+    #service-section{
+      background-color: #FFF;
+      padding: 90px 0px 45px;
+
+      .box-wrapper{
+        overflow: hidden;
+        text-align: left;
+        margin: 0px auto 40px;
+
+        .box-icon{
+             float: left;
+             width: 90px;
+             height: 90px;
+             color: #FFF;
+             font-size: 45px;
+             overflow: hidden;
+             text-align: center;
+             display: inline-block;
+             margin: 0px 20px 15px 0px;
+             background-color: #C03B44 ;
+             border-radius: 50%;
+             transition: all 0.3s ease-in-out 0s;
+
+             span{
+               margin-top: 20px;
+             }
+        }
+
+        .box-icon:hover{
+          background-color: #110e39;
+        }
+
+        .box-content{
+          overflow: hidden;
+          .box-title{
+            width: 100%;
+            overflow: hidden;
+            margin: 0px auto 15px;
+          }
+          .box-desc{
+
+          }
+        }
+      }
+    }
+    /* #END Service section*/
+    /*-------------------------------------------------*/
+
+
+    /*---------------------------------------------*/
+    /*Skill Section */
+
+    #skills-section{
+      width: 100%;
+      background-color: #110e39;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-image: url("../images/bg3.jpg");
+      background-size: cover;
+
+    }
+    /* #END Skill section*/
+    /*-------------------------------------------------*/
+
+    #hobbies-section{
+      padding: 90px 0px 45px;
+      width: 100%;
+      color: white;
+      background-color: #110e39;
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-image: url("../images/bg2.jpg");
+      background-size: cover;
+
+      h1{
+        font-size: 50px;
+        line-height: 60px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 80px;
+      }
+      h1::after{
+        bottom: 0;
+        left: 50%;
+        height: 2px;
+        content: "";
+        width: 100px;
+        margin-left: -50px;
+        position: absolute;
+        background-color: #C03B44 ;
+      }
+
+      .box-hobbies{
+        text-align: center;
+        margin-left: 20px;
+        border: solid 10px white;
+        padding-top: 3px;
+        width: 4em;
+        height: 4em;
+        color: #FFF;
+        font-size: 45px;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out 0s;
+
+        .icon-hobbies{
+          width: 60%;
+          position: relative;
+          left: 25%;
+          top: 15%;
+        }
+      }
+    }
+    /*---------------------------------------------*/
+    /*Resume Section */
+
+    #resume-section{
+      background-color: #FFF;
+      padding: 90px 0px 45px;
+    }
+    /* #END Resume section*/
+    /*-------------------------------------------------*/
+
+    #contact-section{
+      background-color: #030303;
+      color: #ffffff;
+      padding: 90px 0px 45px;
+
+      .social-wrapper{
+        text-align: center;
+        margin-bottom: 20px;
+
+        .box-social{
+          margin-left: 20px;
+          padding-top: 3px;
+          width: 1.5em;
+          height: 1.5em;
+          color: #FFF;
+          font-size: 45px;
+          overflow: hidden;
+          text-align: center;
+          display: inline-block;
+          border-radius: 50%;
+          transition: all 0.3s ease-in-out 0s;
+
+        }
+        .box-social-linkedin{
+          background-color: #006fa6;
+        }
+        .box-social-skype{
+          background-color: #0078CA;
+        }
+        .box-social-mail{
+          background-color: #dd4b39;
+        }
+      }
+
+
+
+      #copyright{
+        text-align: center;
+        font-family: sanchez;
+      }
+    }
+  }
+}

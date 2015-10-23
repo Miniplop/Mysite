@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/*Loading Screen*/
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000; }
+  #loader-wrapper #loader {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  #loader-wrapper .sk-folding-cube {
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg); }
+  #loader-wrapper .sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  #loader-wrapper .sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+    animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%; }
+  #loader-wrapper .sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg); }
+  #loader-wrapper .sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    transform: scale(1.1) rotateZ(180deg); }
+  #loader-wrapper .sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    transform: scale(1.1) rotateZ(270deg); }
+  #loader-wrapper .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s; }
+  #loader-wrapper .sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s; }
+  #loader-wrapper .sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s; }
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; }
+  25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1; }
+  90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0; } }
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; }
+  25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1; }
+  90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0; } }
+/* Loaded */
+.loaded #loader-wrapper {
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  visibility: hidden; }
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+/* G├®n├®ral rules*/
+@font-face {
+  font-family: titleFont;
+  src: url("../font/Mohave/Mohave-Bold.otf");
+  font-weight: bold; }
+@font-face {
+  font-family: Myname;
+  src: url("../font/DEFTONE.ttf"); }
+h1, h2, h3, h4, h5, h6 {
+  font-family: titleFont,Arial,sans-serif; }
+
+p, span, a {
+  font-family: sanchez,Arial,sans-serif; }
+
+li > a {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 50px;
+  padding: 10px 0px; }
+
+span#Myname {
+  font-family: Myname,Arial,sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg); }
+
+h1 {
+  font-size: 35px;
+  line-height: 40px; }
+
+h2 {
+  font-size: 30px;
+  line-height: 37px; }
+
+h3 {
+  font-size: 27px;
+  line-height: 33px; }
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300; }
+
+h5 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300; }
+
+h6 {
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 300; }
+
+html .chart canvas {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0; }
+html .chart span {
+  color: #555;
+  position: relative;
+  display: block;
+  line-height: 220px;
+  text-align: center;
+  width: 220px;
+  font-family: sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  margin-left: 5px; }
+html body {
+  /* Header rules*/
+  /*---------------------------------------------*/
+  /*Home Section */
+  /* #END Home section*/
+  /*-------------------------------------------------*/
+  /*---------------------------------------------*/
+  /*Service Section */
+  /* #END Service section*/
+  /*-------------------------------------------------*/
+  /*---------------------------------------------*/
+  /*Skill Section */
+  /* #END Skill section*/
+  /*-------------------------------------------------*/
+  /*---------------------------------------------*/
+  /*Resume Section */
+  /* #END Resume section*/
+  /*-------------------------------------------------*/ }
+  html body .section {
+    width: 100%; }
+    html body .section .section-head h3 {
+      text-align: center;
+      line-height: 33px;
+      font-weight: 300;
+      overflow: hidden;
+      margin-bottom: 80px;
+      text-transform: capitalize; }
+    html body .section .section-head .section-title h1 {
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      text-transform: capitalize;
+      position: relative;
+      overflow: hidden; }
+    html body .section .section-head .section-title h1::after {
+      bottom: 0;
+      left: 50%;
+      height: 2px;
+      content: "";
+      width: 100px;
+      margin-left: -50px;
+      position: absolute;
+      background-color: #C03B44; }
+  html body #header-section {
+    transition: all 0.3s ease-in-out 0s;
+    z-index: 999;
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    color: #ffffff; }
+    html body #header-section ul.nav {
+      padding: 15px; }
+    html body #header-section .navbar-header {
+      padding-top: 15px; }
+    html body #header-section a {
+      color: #ffffff; }
+    html body #header-section a:hover {
+      background-color: transparent;
+      color: #C03B44; }
+  html body #home-section {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: 600px; }
+    html body #home-section #home-container {
+      position: relative;
+      padding-top: 300px;
+      text-align: center; }
+      html body #home-section #home-container #myname h1 {
+        color: #ffffff;
+        font-size: 70px; }
+      html body #home-section #home-container #mydescription {
+        margin-bottom: 50px;
+        color: #ffffff; }
+      html body #home-section #home-container #button-myservice a {
+        color: #ffffff;
+        border: 2px solid #FFF;
+        transition: all 0.3s ease-in-out 0s; }
+      html body #home-section #home-container #button-myservice a:hover {
+        background: #ffffff;
+        color: #000000; }
+  html body #service-section {
+    background-color: #FFF;
+    padding: 90px 0px 45px; }
+    html body #service-section .box-wrapper {
+      overflow: hidden;
+      text-align: left;
+      margin: 0px auto 40px; }
+      html body #service-section .box-wrapper .box-icon {
+        float: left;
+        width: 90px;
+        height: 90px;
+        color: #FFF;
+        font-size: 45px;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        margin: 0px 20px 15px 0px;
+        background-color: #C03B44;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out 0s; }
+        html body #service-section .box-wrapper .box-icon span {
+          margin-top: 20px; }
+      html body #service-section .box-wrapper .box-icon:hover {
+        background-color: #110e39; }
+      html body #service-section .box-wrapper .box-content {
+        overflow: hidden; }
+        html body #service-section .box-wrapper .box-content .box-title {
+          width: 100%;
+          overflow: hidden;
+          margin: 0px auto 15px; }
+  html body #skills-section {
+    width: 100%;
+    background-color: #110e39;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url("../images/bg3.jpg");
+    background-size: cover; }
+  html body #hobbies-section {
+    padding: 90px 0px 45px;
+    width: 100%;
+    color: white;
+    background-color: #110e39;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-image: url("../images/bg2.jpg");
+    background-size: cover; }
+    html body #hobbies-section h1 {
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      text-transform: capitalize;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 80px; }
+    html body #hobbies-section h1::after {
+      bottom: 0;
+      left: 50%;
+      height: 2px;
+      content: "";
+      width: 100px;
+      margin-left: -50px;
+      position: absolute;
+      background-color: #C03B44; }
+    html body #hobbies-section .box-hobbies {
+      text-align: center;
+      margin-left: 20px;
+      border: solid 10px white;
+      padding-top: 3px;
+      width: 4em;
+      height: 4em;
+      color: #FFF;
+      font-size: 45px;
+      overflow: hidden;
+      text-align: center;
+      display: inline-block;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out 0s; }
+      html body #hobbies-section .box-hobbies .icon-hobbies {
+        width: 60%;
+        position: relative;
+        left: 25%;
+        top: 15%; }
+  html body #resume-section {
+    background-color: #FFF;
+    padding: 90px 0px 45px; }
+  html body #contact-section {
+    background-color: #030303;
+    color: #ffffff;
+    padding: 90px 0px 45px; }
+    html body #contact-section .social-wrapper {
+      text-align: center;
+      margin-bottom: 20px; }
+      html body #contact-section .social-wrapper .box-social {
+        margin-left: 20px;
+        padding-top: 3px;
+        width: 1.5em;
+        height: 1.5em;
+        color: #FFF;
+        font-size: 45px;
+        overflow: hidden;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out 0s; }
+      html body #contact-section .social-wrapper .box-social-linkedin {
+        background-color: #006fa6; }
+      html body #contact-section .social-wrapper .box-social-skype {
+        background-color: #0078CA; }
+      html body #contact-section .social-wrapper .box-social-mail {
+        background-color: #dd4b39; }
+    html body #contact-section #copyright {
+      text-align: center;
+      font-family: sanchez; }
+
+/*# sourceMappingURL=main.css.map */
