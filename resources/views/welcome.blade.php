@@ -2,15 +2,26 @@
 <html>
 <head>
     <title>Kévin Jean,full-stack developer</title>
-    <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Karma' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{asset('/bower_components/bootstrap/css/bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{asset('/bower_components/slick/slick/slick.css')}}"/>
+    <link rel="stylesheet" href="{{asset('/bower_components/slick/slick/slick-theme.css')}}"/>
     <link rel="stylesheet" href="{{asset('/bower_components/vertical-timeline/css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('/font/foundation-icons/foundation-icons.css')}}"/>
     <link rel="stylesheet" href="{{asset('sass/main.css')}}"/>
 </head>
 
+
+
 <!-- START BODY -->
 <body>
+
+
 
 <div id="loader-wrapper">
     <div id="loader">
@@ -56,7 +67,7 @@
                             <a href="#cv-section">CV</a>
                         </li>
                         <li>
-                            <a href="#contact-section">Contact</a>
+                            <a href="#contact-me-section">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -110,7 +121,9 @@
                     <h3>Web Development</h3>
                 </div>
                 <div class="box-desc">
-                    <p>Blazueygazuoeouazeboazueboahzeboazhbeoahzbe b e zeiauzgeuae a</p>
+                    <p>
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.
+                    </p>
                 </div>
             </div>
         </div>
@@ -123,7 +136,9 @@
                     <h3>Web Design</h3>
                 </div>
                 <div class="box-desc">
-                    <p>Blazueygazuoeouazeboazueboahzeboazhbeoahzbe b e zeiauzgeuae a</p>
+                    <p>
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.
+                    </p>
                 </div>
             </div>
         </div>
@@ -136,7 +151,9 @@
                     <h3>Mobile Development</h3>
                 </div>
                 <div class="box-desc">
-                    <p>Blazueygazuoeouazeboazueboahzeboazhbeoahzbe b e zeiauzgeuae a</p>
+                    <p>
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.
+                    </p>
                 </div>
             </div>
         </div>
@@ -149,7 +166,8 @@
                     <h3>Server Development</h3>
                 </div>
                 <div class="box-desc">
-                    <p>Blazueygazuoeouazeboazueboahzeboazhbeoahzbe b e zeiauzgeuae a</p>
+                    <p>
+                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.</p>
                 </div>
             </div>
         </div>
@@ -161,9 +179,82 @@
 <!-- SKILLS SECTION -->
 <div class="section" id="skills-section">
 
-        <div class="container">
-            <div class="chart" id="graph" data-percent="88"></div>
+    <div class="container">
+        <div class="section-title">
+            <div class="title">
+                <h1>My Skills </h1>
+            </div>
+            <div>
+                <h3>Punchline batard</h3>
+            </div>
         </div>
+
+            <!-- CAROUSEL START -->
+            <div class="skill-carousel">
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="90"></canvas>
+                        <div class="skill-description">
+                            <h3>JavaScript</h3>
+                            <p>Backbone, Angular
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="90"></canvas>
+                        <div class="skill-description">
+                            <h3>PHP</h3>
+                            <p>Symphony 2, Laravel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="80"></canvas>
+                        <div class="skill-description">
+                            <h3>HTML 5</h3>
+                            <p>World Wide Web Consortium
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="70"></canvas>
+                        <div class="skill-description">
+                            <h3>CSS 3</h3>
+                            <p>Compass, Less
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="60"></canvas>
+                        <div class="skill-description">
+                            <h3>DataBase</h3>
+                            <p>MySql, MongoDB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="wrapper-skill">
+                        <canvas class="skill" id="myChart" skilled-pct="50"></canvas>
+                        <div class="skill-description">
+                            <h3>Others Tech.</h3>
+                            <p>Java, C, C++
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
 </div>
 <!-- #END SKILLS SECTION -->
 
@@ -176,7 +267,7 @@
                     <h1>Resume</h1>
                 </div>
                 <div>
-                    <h3>My Story</h3>
+                    <h3>Once upon the time ...</h3>
                 </div>
             </div>
             <div class="col-md-12">
@@ -187,9 +278,9 @@
                         </div> <!-- cd-timeline-img -->
 
                         <div class="cd-timeline-content">
-                            <h2>ENSIMAG</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                            <a href="#0" class="cd-read-more">Read more</a>
+                            <h2>ENSIMAG - Grenoble</h2>
+                            <p>                                One of the best Engineer School for Computer Science in France. I studied 3 years with a specialty "Information System", moreover I did lots of projects with size team of varying sizes. </p>
+                            <a href="http://ensimag.grenoble-inp.fr/l-ecole/?RH=ENSIMAG-01_Present" class="cd-read-more">Read more</a>
                             <span class="cd-date">2013-2016</span>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
@@ -200,7 +291,7 @@
                         </div> <!-- cd-timeline-img -->
 
                         <div class="cd-timeline-content">
-                            <h2>Cycle Préparatoire Polytechnique</h2>
+                            <h2>CPP - Nancy</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
                             <a href="#0" class="cd-read-more">Read more</a>
                             <span class="cd-date">2011-2013</span>
@@ -213,7 +304,7 @@
                         </div> <!-- cd-timeline-img -->
 
                         <div class="cd-timeline-content">
-                            <h2>BAC S</h2>
+                            <h2>BAC S - Toulouse</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
                             <a href="#0" class="cd-read-more">Read more</a>
                             <span class="cd-date">2011</span>
@@ -231,31 +322,112 @@
 
 <!-- HOBBIES SECTION -->
 <div class="section" id="hobbies-section">
-        <div class="container">
+    <div class="container">
+        <div class="section-title">
             <div class="title">
-                <h1>My Hobbies </h1>
+                <h1>My Hobbies</h1>
             </div>
-            <div class="row">
-                <div class="box-hobbies ">
-                    <div class="icon-hobbies">
-                        <img class="img-responsive" src="{{asset("/images/icons/drink24.svg")}}">
+            <h3>Rest and peace</h3>
+        </div>
+        <div class="section-content">
+
+            <div class="col-md-6">
+                <div class="col-md-5 ">
+                    <span class="box-icon">
+                        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
+                    </span>
+                </div>
+                <div class="col-md-7 box-content">
+                    <div class="box-title">
+                        <h3>Culture</h3>
+                        <h5>Lama</h5>
+                    </div>
+                    <hr>
+                    <div class="box-desc">
+                        <ul>
+                            <li>Reading</li>
+                            <li>Cooking</li>
+                            <li>Music</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="box-hobbies">
+            </div>
 
+            <div class="col-md-6">
+                <div class="col-md-5 ">
+                    <span class="box-icon">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                    </span>
                 </div>
-                <div class="box-hobbies">
+                <div class="col-md-7 box-content">
+                    <div class="box-title">
+                        <h3>Games</h3>
+                        <h5>Entertain</h5>
+                    </div>
+                    <hr>
+                    <div class="box-desc">
+                        <ul>
+                            <li>Poker</li>
+                            <li>Bowling</li>
+                            <li>Video Making</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md-6">
+                <div class="col-md-5 ">
+                    <span class="box-icon">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                    </span>
+                </div>
+                <div class="col-md-7 box-content">
+                    <div class="box-title">
+                        <h3>Sports</h3>
+                        <h5>Exert Yourself</h5>
+                    </div>
+                    <hr>
+                    <div class="box-desc">
+                        <ul>
+                            <li>Swimming</li>
+                            <li>Dancing</li>
+                            <li>Running</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-5 ">
+                    <span class="box-icon">
+                        <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+                    </span>
+                </div>
+                <div class="col-md-7 box-content">
+                    <div class="box-title">
+                        <h3>Travel</h3>
+                        <h5>Discover</h5>
+                    </div>
+                    <hr>
+                    <div class="box-desc">
+                        <ul>
+                            <li>Linguistic travel</li>
+                            <li>Camping</li>
+                            <li>Hiking</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
+    </div>
 
 
 </div>
 <!-- #END HOBBIES SECTION -->
 
 <!-- CV SECTION -->
-<div class="section" id="service-section">
+<div class="section" id="cv-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12 section-head">
@@ -263,29 +435,91 @@
                     <h1>My CV</h1>
                 </div>
                 <div>
-                    <h3>Lama</h3>
+                    <h3>Wants to read more about me ?</h3>
                 </div>
+            </div>
+            <div class="section-content">
+                <div class="col-md-4">
 
+                    <img class=" visible-lg" src="{{asset("/images/cv.png")}}">
+                    </img>
+
+                </div>
+                <div class="col-md-8">
+                    <h3>CV PDF</h3>
+                    <p>
+                        My resume in PDF format contains all the information on my profile. If you can not find information on my resume, please see the complete website or <a>contact me.</a></p>
+                    <button class="btn  btn-primary">
+                        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                        Download
+                    </button>
+                    <h3>CV Online</h3>
+                    <p>
+                        Mon Curriculum Vitae au format PDF contient toutes les informations concernant mon profil en vue synthétique. Si vous ne trouvez pas une information dans mon CV, n'hésitez pas à consulter l'ensemble du site internet ou à me contacter.
+                    </p>
+                    <button class="btn btn-primary">
+                        <i class="fi-social-linkedin"></i>
+                        LinkedIn
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <!-- #END CV SECTION -->
 
-<!-- CAFE SECTION -->
-<div class="section" id="skills-section">
+<!-- CONTACT ME SECTION -->
+<div class="section" id="contact-me-section">
     <div class="container">
         <div class="section-title">
-            <h1>HOBBIES</h1>
+            <div class="title">
+                <h1>Contact Me</h1>
+            </div>
+            <h3>Let's be friend</h3>
         </div>
-        <h3>My history</h3>
+        <div class="section-content">
+            <form>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-3">
+                            <label for="exampleInputEmail1">Name*</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="exampleInputPassword1">Email*</label>
+                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-offset-2  col-md-8">
+                            <label for="exampleInputFile">Message*</label>
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="">
+                    <div type="submit" class="submit-button">
+                        <a class="btn btn-lg">
+                            Send Message
+                        </a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
     </div>
 </div>
-<!-- #END CAFE SECTION -->
+<!-- #END CONTACT ME SECTION -->
 
 
-<!-- CONTACT SECTION -->
-<div class="section" id="contact-section">
+<!-- FOOTER SECTION -->
+<div class="section" id="footer-section">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-4 col-md-4 social-wrapper">
@@ -300,7 +534,6 @@
                 <div class="box-social box-social-linkedin">
                     <i class="fi-social-linkedin"></i>
                 </div>
-
             </div>
 
         </div>
@@ -310,10 +543,7 @@
         </div>
     </div>
 </div>
-<!-- #END CONTACT SECTION -->
-
-</body>
-<!-- #END BODY -->
+<!-- #END FOOTER SECTION -->
 
 <!-- INCLUDE LIBRARY -->
 <script src="{{asset('/bower_components/jquery/dist/jquery.min.js')}}"></script>
@@ -323,10 +553,18 @@
 <script src="{{asset('/bower_components/chart/Chart.min.js')}}"></script>
 <script src="{{asset('/bower_components/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
-<script src="{{asset('/bower_components/progressbar/progressbar.min.js')}}"></script>
+<script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
+<script src="{{asset('/bower_components/slick/slick/slick.min.js')}}"></script>
 
 <!-- SCRIPT JAVASCRIPT -->
 <script src="{{asset('/js/main.js')}}"></script>
 <!-- #END SCRIPT JAVASCRIPT -->
+
+</body>
+<!-- #END BODY -->
+
+
+
+
 
 </html>

@@ -12,11 +12,32 @@
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: titleFont,Arial,sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 p,span,a {
-  font-family: sanchez,Arial,sans-serif;
+  font-family: 'Karma', serif;
+}
+
+p a{
+  color: #C03B44 ;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+a:visited{
+  color: #000000;
+}
+
+input, textarea{
+  background: transparent none repeat scroll 0% 0% !important;
+  border: 2px solid white !important;
+  color: white !important;
+}
+
+p{
+  font: 16px/27px 'Karma';
+  letter-spacing: 0.5px;
 }
 
 li>a{
