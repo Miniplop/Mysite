@@ -1,0 +1,27 @@
+/* Header rules*/
+
+#header-section{
+  border-radius: 0;
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 999;
+  background-color: transparent;
+  position: fixed;
+  top: 0px;
+  color: #ffffff;
+
+  ul.nav{
+    padding: 15px;
+  }
+  .navbar-header{
+    padding-top: 15px;
+  }
+
+  a{
+    color: #ffffff;
+  }
+
+  a:hover{
+    background-color: transparent;
+    color:#C03B44 ;
+  }
+}
