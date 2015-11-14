@@ -478,16 +478,17 @@
             <h3>Let's be friend</h3>
         </div>
         <div class="section-content">
-            <form>
+            <form data-toggle="validator">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-3">
                             <label for="exampleInputEmail1">Name*</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                            <input id="mail_author" data-minlength="3" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
                         </div>
                         <div class="col-md-3">
-                            <label for="exampleInputPassword1">Email*</label>
-                            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
+                            <label for="exampleInputPassword1">Email* </label>
+                            <input id="mail_sender" type="email" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
+                            <span class="help-block with-errors"></span>
                         </div>
                     </div>
 
@@ -497,20 +498,39 @@
                     <div class="row">
                         <div class="col-md-offset-2  col-md-8">
                             <label for="exampleInputFile">Message*</label>
-                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                            <textarea class="form-control" rows="5" id="mail_content" placeholder="Your Message"></textarea>
                         </div>
                     </div>
 
                 </div>
                 <div class="">
                     <div type="submit" class="submit-button">
-                        <a class="btn btn-lg">
+                        <a class="btn btn-lg" onclick="sendMail(); return false" data-toggle="modal" data-target="#myModal" >
                             Send Message
                         </a>
                     </div>
                 </div>
-
             </form>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -555,6 +575,7 @@
 <script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
 <script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
 <script src="{{asset('/bower_components/slick/slick/slick.min.js')}}"></script>
+<script src="{{asset('/bower_components/bootstrap-validator/js/validator.js')}}"></script>
 
 <!-- SCRIPT JAVASCRIPT -->
 <script src="{{asset('/js/main.js')}}"></script>

@@ -40,6 +40,37 @@ var options = {
     }
 };
 
+function sendMail() {
+
+    var email = $("#mail_sender").val();
+    var name = $("#mail_author").val();
+    var content = $("#mail_content").val();
+
+    var Info = {
+        name: name,
+        email: email,
+        body: content
+    };
+
+    console.log(Info);
+
+    $.ajax({
+        type: "POST",
+        url: "/mail",
+        dataType: "json",
+        success: function (msg) {
+            if (msg) {
+                alert("Somebody send a msg !");
+                location.reload(true);
+            } else {
+                alert("Cannot add to list !");
+            }
+        },
+        data: Info
+    });
+}
+
+
 
 
 $(document).ready(function() {
@@ -49,7 +80,7 @@ $(document).ready(function() {
         $('body').addClass('loaded');
     }, 1000);
 
-    $('a').click(function(){
+    $('#header-section a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 1000);
@@ -106,6 +137,9 @@ $(document).ready(function() {
         $("#home-container").css("padding-top",height/2.5);
     });
 
+
+
+
     // Scroll animation
     window.scrollTo(0, 0);
 
@@ -124,3 +158,4 @@ $(document).ready(function() {
     });
 
 });
+

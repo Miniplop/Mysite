@@ -15,12 +15,12 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => "mg.kevinjean.com",
+        'secret' => "key-9fda207084b88ce2ab8d0ce8a380ee67",
     ],
 
     'mandrill' => [
-        'secret' => env('MANDRILL_SECRET'),
+        'secret' => "",
     ],
 
     'ses' => [
