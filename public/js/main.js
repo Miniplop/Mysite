@@ -1,4 +1,78 @@
 
+
+//these options are common to all skills
+var options = {
+
+    //prevents the text vanishing on redraw (when tooltip shows on hover)
+    showTooltips: false,
+
+    segmentShowStroke : false,
+    percentageInnerCutout : 80,
+
+    //nicer than default bouncing
+    animationEasing: "easeOut",
+
+    //bit smoother with less steps
+    animationSteps: 40,
+
+    //do once on completion rather than every frame/draw cycle
+    onAnimationComplete: function () {
+
+        //setup the font and center it's position
+        this.chart.ctx.font = 'Normal 34px Roboto Slab';
+        this.chart.ctx.fillStyle = 'white';
+        this.chart.ctx.textAlign = 'center';
+        this.chart.ctx.textBaseline = 'middle';
+
+        //put the pabel together based on the given 'skilled' percentage
+        var valueLabel = this.segments[0].value + ' %';
+
+        //find the center point
+        var x = this.chart.canvas.clientWidth / 2;
+        var y = this.chart.canvas.clientHeight / 2;
+
+        //hack to center different fonts
+        var x_fix = 0;
+        var y_fix = 2;
+
+        //render the text
+        this.chart.ctx.fillText(valueLabel, x + x_fix, y + y_fix);
+    }
+};
+
+function sendMail() {
+
+    var email = $("#mail_sender").val();
+    var name = $("#mail_author").val();
+    var content = $("#mail_content").val();
+
+    var Info = {
+        name: name,
+        email: email,
+        body: content
+    };
+
+    console.log(Info);
+
+    $.ajax({
+        type: "POST",
+        url: "/mail",
+        dataType: "json",
+        success: function (msg) {
+            if (msg) {
+                alert("Somebody send a msg !");
+                location.reload(true);
+            } else {
+                alert("Cannot add to list !");
+            }
+        },
+        data: Info
+    });
+}
+
+
+
+
 $(document).ready(function() {
 
     // Loading Screen
@@ -6,13 +80,51 @@ $(document).ready(function() {
         $('body').addClass('loaded');
     }, 1000);
 
-    $('a').click(function(){
+    $('#header-section a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
+        }, 1000);
         return false;
     });
 
+    // Chart.js
+
+    $(".skill-description").width( $('.skill').width());
+
+    //cycle through each skill
+    $('.skill').each(function () {
+
+        //get this skill's percentage and color
+        var skilledPercentage = $(this).attr('skilled-pct');
+
+        //create a custom data set
+        var data = [{
+            //the amount that represents 'skilled' percentage
+            value: skilledPercentage,
+            color: "#C03B44"
+        }, {
+            //the amount that represents 'unskilled' percentage
+            value: 100 - skilledPercentage,
+            color: '#2A2A2A'
+        }];
+
+        //now draw the chart on this skill canvas with the custom data set
+        var ctx = $(this).get(0).getContext("2d");
+        chart = new Chart(ctx).Doughnut(data, options);
+    });
+
+    $('.skill-carousel').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true
+        }
+    );
+
+    // Calcul des paddings dans les slides pour aligner le contenu
+    $(".slick-slide").each(function(){
+        $(this).children().css("padding-left",($(this).width()-$('.skill').width())/2);
+    });
 
     // Resize window
     var height = $(window).height();
@@ -24,6 +136,9 @@ $(document).ready(function() {
         $("#home-section").height(height);
         $("#home-container").css("padding-top",height/2.5);
     });
+
+
+
 
     // Scroll animation
     window.scrollTo(0, 0);
@@ -42,46 +157,5 @@ $(document).ready(function() {
 
     });
 
-    var el = document.getElementById('graph'); // get canvas
-
-    var options = {
-        percent:  el.getAttribute('data-percent') || 25,
-        size: el.getAttribute('data-size') || 220,
-        lineWidth: el.getAttribute('data-line') || 15,
-        rotate: el.getAttribute('data-rotate') || 0
-    }
-
-    var canvas = document.createElement('canvas');
-    var span = document.createElement('span');
-    span.textContent = options.percent + '%';
-
-    if (typeof(G_vmlCanvasManager) !== 'undefined') {
-        G_vmlCanvasManager.initElement(canvas);
-    }
-
-    var ctx = canvas.getContext('2d');
-    canvas.width = canvas.height = options.size;
-
-    el.appendChild(span);
-    el.appendChild(canvas);
-
-    ctx.translate(options.size / 2, options.size / 2); // change center
-    ctx.rotate((-1 / 2 + options.rotate / 180) * Math.PI); // rotate -90 deg
-
-//imd = ctx.getImageData(0, 0, 240, 240);
-    var radius = (options.size - options.lineWidth) / 2;
-
-    var drawCircle = function(color, lineWidth, percent) {
-        percent = Math.min(Math.max(0, percent || 1), 1);
-        ctx.beginPath();
-        ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, false);
-        ctx.strokeStyle = color;
-        ctx.lineCap = 'round'; // butt, round or square
-        ctx.lineWidth = lineWidth
-        ctx.stroke();
-    };
-
-    drawCircle('#efefef', options.lineWidth, 100 / 100);
-    drawCircle('#555555', options.lineWidth, options.percent / 100);
-
 });
+
