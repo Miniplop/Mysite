@@ -1,0 +1,76 @@
+
+
+#contact-me-section{
+  width: 100%;
+  background-color: #110e39;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-image: url("../images/bg4.jpg");
+  background-size: cover;
+
+  padding: 110px 0px 95px;
+  color: white;
+
+  .section-title{
+
+    h3{
+      text-align: center;
+      line-height: 33px;
+      font-weight: 300;
+      overflow: hidden;
+      margin-bottom: 80px;
+      text-transform: capitalize;
+    }
+
+    .title{
+
+      h1{
+        font-size: 50px;
+        line-height: 60px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+        position: relative;
+        overflow: hidden;
+      }
+
+      h1::after{
+        bottom: 0;
+        left: 50%;
+        height: 2px;
+        content: "";
+        width: 100px;
+        margin-left: -50px;
+        position: absolute;
+        background-color: #C03B44 ;
+      }
+    }
+  }
+
+  form{
+
+    .submit-button{
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .submit-button a{
+      font-family: "Karma",serif;
+      background: transparent none repeat scroll 0% 0%;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .submit-button a:hover{
+      background: #ffffff;
+      color: #000000;
+    }
+
+  }
+}
+
