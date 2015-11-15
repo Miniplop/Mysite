@@ -9,11 +9,12 @@
 
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="{{asset('/bower_components/bootstrap/css/bootstrap.css')}}"/>
-    <link rel="stylesheet" href="{{asset('/bower_components/slick/slick/slick.css')}}"/>
-    <link rel="stylesheet" href="{{asset('/bower_components/slick/slick/slick-theme.css')}}"/>
     <link rel="stylesheet" href="{{asset('/bower_components/vertical-timeline/css/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('/font/foundation-icons/foundation-icons.css')}}"/>
     <link rel="stylesheet" href="{{asset('sass/main.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}"/>
+    <link rel="stylesheet" href="{{asset('/bower_components/owl-carousel/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('/bower_components/owl-carousel/owl.theme.css')}}">
 </head>
 
 
@@ -26,12 +27,9 @@
 <div id="loader-wrapper">
     <div id="loader">
         <!-- Loader SVG -->
-
+        <div></div>
         <div class="sk-folding-cube">
-            <div class="sk-cube1 sk-cube"></div>
-            <div class="sk-cube2 sk-cube"></div>
-            <div class="sk-cube4 sk-cube"></div>
-            <div class="sk-cube3 sk-cube"></div>
+            <img src="{{asset('/images/puff.svg')}}" width="100px">
         </div>
     </div>
 </div>
@@ -52,22 +50,19 @@
                             <a href="#home-section">Home</a>
                         </li>
                         <li>
-                            <a href="#service-section" >Service</a>
+                            <a href="#service-section" >Services</a>
                         </li>
                         <li>
                             <a href="#skills-section">Skills</a>
                         </li>
                         <li>
-                            <a href="#resume-section">Resume</a>
+                            <a href="#resume-section">Formation</a>
                         </li>
                         <li>
                             <a href="#hobbies-section">Hobbies</a>
                         </li>
                         <li>
                             <a href="#cv-section">CV</a>
-                        </li>
-                        <li>
-                            <a href="#contact-me-section">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -91,7 +86,7 @@
                 </h4>
             </div>
             <div id="button-myservice">
-                <a class="btn btn-lg" title="My services">MY SERVICES</a>
+                <a class="btn btn-lg" title="My services" href="#skills-section">MY SKILLS</a>
             </div>
         </div>
     </div>
@@ -99,55 +94,51 @@
 <!-- #END HOME SECTION -->
 
 <!-- SERVICE SECTION -->
-<div class="section" id="service-section">
+<div class="section " id="service-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12 section-head">
                 <div class="section-title">
-                    <h1>Services</h1>
+                    <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">Services</h1>
                 </div>
-                <div>
-                    <h3>All I Can Do</h3>
-                </div>
-
             </div>
         </div>
         <div class="col-md-6 box-wrapper">
-            <div class="box-icon">
+            <div class="box-icon wow flipInY" data-wow-duration="1s" data-wow-delay="200ms">
                 <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             </div>
-            <div class="box-content">
+            <div class="box-content wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
                 <div class="box-title">
                     <h3>Web Development</h3>
                 </div>
                 <div class="box-desc">
                     <p>
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.
+                        It's been two years that I spent most of my projects to the achievement of web application. By my curiosity and creativity, I discovered a passion for this domains.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 box-wrapper">
-            <div class="box-icon">
+        <div class="col-md-6 box-wrapper ">
+            <div class="box-icon wow flipInY" data-wow-duration="1s" data-wow-delay="200ms">
                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
             </div>
-            <div class="box-content">
+            <div class="box-content wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
                 <div class="box-title">
                     <h3>Web Design</h3>
                 </div>
                 <div class="box-desc">
                     <p>
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed Morbi accumsan ipsum velit.
+                        The web is a boundless field for creativity in design. In addition there are new inspiration every day , it's fascinating .
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 box-wrapper">
-            <div class="box-icon">
+        <div class="col-md-6 box-wrapper ">
+            <div class="box-icon wow flipInY" data-wow-duration="1s" data-wow-delay="200ms">
                 <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
             </div>
-            <div class="box-content">
-                <div class="box-title">
+            <div class="box-content wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
+                <div class="box-title " >
                     <h3>Mobile Development</h3>
                 </div>
                 <div class="box-desc">
@@ -157,12 +148,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 box-wrapper">
-            <div class="box-icon">
+        <div class="col-md-6 box-wrapper ">
+            <div class="box-icon wow flipInY" data-wow-duration="1s" data-wow-delay="200ms">
                 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
             </div>
-            <div class="box-content">
-                <div class="box-title">
+            <div class="box-content wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
+                <div class="box-title " >
                     <h3>Server Development</h3>
                 </div>
                 <div class="box-desc">
@@ -180,94 +171,89 @@
 <div class="section" id="skills-section">
 
     <div class="container">
-        <div class="section-title">
-            <div class="title">
+        <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+            <div class="title ">
                 <h1>My Skills </h1>
             </div>
-            <div>
-                <h3>Punchline batard</h3>
-            </div>
+
         </div>
 
-            <!-- CAROUSEL START -->
-            <div class="skill-carousel">
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="90"></canvas>
-                        <div class="skill-description">
-                            <h3>JavaScript</h3>
-                            <p>Backbone, Angular
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="90"></canvas>
-                        <div class="skill-description">
-                            <h3>PHP</h3>
-                            <p>Symphony 2, Laravel
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="80"></canvas>
-                        <div class="skill-description">
-                            <h3>HTML 5</h3>
-                            <p>World Wide Web Consortium
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="70"></canvas>
-                        <div class="skill-description">
-                            <h3>CSS 3</h3>
-                            <p>Compass, Less
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="60"></canvas>
-                        <div class="skill-description">
-                            <h3>DataBase</h3>
-                            <p>MySql, MongoDB
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="wrapper-skill">
-                        <canvas class="skill" id="myChart" skilled-pct="50"></canvas>
-                        <div class="skill-description">
-                            <h3>Others Tech.</h3>
-                            <p>Java, C, C++
-                            </p>
-                        </div>
+        <!-- CAROUSEL START -->
+        <div  id="Myskills" class="owl-carousel">
+            <div>
+                <div class="wrapper-skill  wow flipInX" data-wow-duration="1s" data-wow-delay="200ms">
+                    <canvas class="skill" id="myChart" skilled-pct="90" ></canvas>
+                    <div class="skill-description">
+                        <h3>JavaScript</h3>
+                        <span>Backbone, Angular
+                        </span>
                     </div>
                 </div>
             </div>
+            <div>
+                <div class="wrapper-skill wow flipInX" data-wow-duration="1s" data-wow-delay="200ms">
+                    <canvas class="skill  " id="myChart" skilled-pct="90" ></canvas>
+                    <div class="skill-description">
+                        <h3>PHP</h3>
+                        <span>Symphony 2, Laravel
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper-skill wow flipInX" data-wow-duration="1s" data-wow-delay="200ms">
+                    <canvas class="skill " id="myChart" skilled-pct="80" ></canvas>
+                    <div class="skill-description">
+                        <h3>HTML 5</h3>
+                        <span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper-skill">
+                    <canvas class="skill" id="myChart" skilled-pct="70"></canvas>
+                    <div class="skill-description">
+                        <h3>CSS 3</h3>
+                        <span>Compass, Less
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper-skill">
+                    <canvas class="skill" id="myChart" skilled-pct="60"></canvas>
+                    <div class="skill-description">
+                        <h3>DataBase</h3>
+                        <span>MySql, MongoDB
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="wrapper-skill">
+                    <canvas class="skill" id="myChart" skilled-pct="50"></canvas>
+                    <div class="skill-description">
+                        <h3>Others Tech.</h3>
+                        <span>Java, C, C++
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>
 </div>
 <!-- #END SKILLS SECTION -->
 
-<!-- RESUME SECTION -->
+<!-- FORMATION SECTION -->
 <div class="section" id="resume-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 section-head">
-                <div class="section-title">
-                    <h1>Resume</h1>
-                </div>
-                <div>
-                    <h3>Once upon the time ...</h3>
+            <div class="col-md-12 section-head wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <div class="section-title ">
+                    <h1>Formation</h1>
                 </div>
             </div>
             <div class="col-md-12">
@@ -279,7 +265,7 @@
 
                         <div class="cd-timeline-content">
                             <h2>ENSIMAG - Grenoble</h2>
-                            <p>                                One of the best Engineer School for Computer Science in France. I studied 3 years with a specialty "Information System", moreover I did lots of projects with size team of varying sizes. </p>
+                            <p>  One of the best Engineer School for Computer Science in France. I studied 3 years with a specialty "Information System", moreover I did lots of projects with size team of varying sizes. </p>
                             <a href="http://ensimag.grenoble-inp.fr/l-ecole/?RH=ENSIMAG-01_Present" class="cd-read-more">Read more</a>
                             <span class="cd-date">2013-2016</span>
                         </div> <!-- cd-timeline-content -->
@@ -292,8 +278,8 @@
 
                         <div class="cd-timeline-content">
                             <h2>CPP - Nancy</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                            <a href="#0" class="cd-read-more">Read more</a>
+                            <p>A preparatory class at large schools of French engineer. I followed specialization Mathematics/Computer Science and Automatism.</p>
+                            <a href="http://www.la-prepa-des-inp.fr/cursus/" class="cd-read-more">Read more</a>
                             <span class="cd-date">2011-2013</span>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
@@ -304,9 +290,9 @@
                         </div> <!-- cd-timeline-img -->
 
                         <div class="cd-timeline-content">
-                            <h2>BAC S - Toulouse</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                            <a href="#0" class="cd-read-more">Read more</a>
+                            <h2>High School Diploma S - Toulouse</h2>
+                            <p>Diploma obtained with mention "good" , specializing in engineering science</p>
+                            <a href="https://fr.wikipedia.org/wiki/Baccalaur%C3%A9at_scientifique" class="cd-read-more">Read more</a>
                             <span class="cd-date">2011</span>
                         </div> <!-- cd-timeline-content -->
                     </div> <!-- cd-timeline-block -->
@@ -323,100 +309,32 @@
 <!-- HOBBIES SECTION -->
 <div class="section" id="hobbies-section">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title  wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
             <div class="title">
                 <h1>My Hobbies</h1>
             </div>
-            <h3>Rest and peace</h3>
         </div>
         <div class="section-content">
 
-            <div class="col-md-6">
-                <div class="col-md-5 ">
-                    <span class="box-icon">
-                        <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>
-                    </span>
-                </div>
-                <div class="col-md-7 box-content">
-                    <div class="box-title">
-                        <h3>Culture</h3>
-                        <h5>Lama</h5>
-                    </div>
-                    <hr>
-                    <div class="box-desc">
-                        <ul>
-                            <li>Reading</li>
-                            <li>Cooking</li>
-                            <li>Music</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-md-3 col-sm-6 hi-icon-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <a class="hi-icon hi-icon-plane "></a>
+                <h3>Travel</h3>
             </div>
 
-            <div class="col-md-6">
-                <div class="col-md-5 ">
-                    <span class="box-icon">
-                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                    </span>
-                </div>
-                <div class="col-md-7 box-content">
-                    <div class="box-title">
-                        <h3>Games</h3>
-                        <h5>Entertain</h5>
-                    </div>
-                    <hr>
-                    <div class="box-desc">
-                        <ul>
-                            <li>Poker</li>
-                            <li>Bowling</li>
-                            <li>Video Making</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-md-3 col-sm-6 hi-icon-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <a class="hi-icon hi-icon-sport">
+                </a>
+                <h3>Sport</h3>
             </div>
 
-            <div class="col-md-6">
-                <div class="col-md-5 ">
-                    <span class="box-icon">
-                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
-                    </span>
-                </div>
-                <div class="col-md-7 box-content">
-                    <div class="box-title">
-                        <h3>Sports</h3>
-                        <h5>Exert Yourself</h5>
-                    </div>
-                    <hr>
-                    <div class="box-desc">
-                        <ul>
-                            <li>Swimming</li>
-                            <li>Dancing</li>
-                            <li>Running</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-md-3 col-sm-6 hi-icon-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <a class="hi-icon hi-icon-music"></a>
+                <h3>Music</h3>
             </div>
 
-            <div class="col-md-6">
-                <div class="col-md-5 ">
-                    <span class="box-icon">
-                        <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
-                    </span>
-                </div>
-                <div class="col-md-7 box-content">
-                    <div class="box-title">
-                        <h3>Travel</h3>
-                        <h5>Discover</h5>
-                    </div>
-                    <hr>
-                    <div class="box-desc">
-                        <ul>
-                            <li>Linguistic travel</li>
-                            <li>Camping</li>
-                            <li>Hiking</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-md-3 col-sm-6 hi-icon-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <a class="hi-icon hi-icon-video"></a>
+                <h3>Video making</h3>
             </div>
         </div>
 
@@ -430,36 +348,40 @@
 <div class="section" id="cv-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 section-head">
-                <div class="section-title">
+            <div class="col-md-12 section-head wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+                <div class="section-title ">
                     <h1>My CV</h1>
-                </div>
-                <div>
-                    <h3>Wants to read more about me ?</h3>
                 </div>
             </div>
             <div class="section-content">
-                <div class="col-md-4">
+                <div class="col-md-4  wow bounceIn" data-wow-duration="1s" data-wow-delay="200ms">
 
-                    <img class=" visible-lg" src="{{asset("/images/cv.png")}}">
+                    <img class=" visible-lg" src="{{asset("/images/cv.png")}}" >
                     </img>
 
                 </div>
-                <div class="col-md-8">
-                    <h3>CV PDF</h3>
-                    <p>
-                        My resume in PDF format contains all the information on my profile. If you can not find information on my resume, please see the complete website or <a>contact me.</a></p>
-                    <button class="btn  btn-primary">
-                        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
-                        Download
+                <div class="col-md-8 " data-wow-duration="1s" data-wow-delay="200ms">
+                    <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">CV PDF</h3>
+                    <p class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
+                        My resume in PDF format contains all the information on my profile. If you can not find information on my resume, please see the complete website or <a href="mailto:kevin.jean@ensimag.grenoble-inp.fr">contact me.</a></p>
+                    <button class="btn  btn-primary wow flipInX">
+                        <a href="{{asset("/images/Resume.pdf")}}" download="Resume_Kévin_Jean.pdf" >
+                            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                            Download
+                        </a>
                     </button>
-                    <h3>CV Online</h3>
-                    <p>
-                        Mon Curriculum Vitae au format PDF contient toutes les informations concernant mon profil en vue synthétique. Si vous ne trouvez pas une information dans mon CV, n'hésitez pas à consulter l'ensemble du site internet ou à me contacter.
+                    <h3 class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">CV Online</h3>
+                    <p class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="200ms">
+                        Find me also on the professional network Linkedin or on GitHub to learn more about the projects on which I worked.
                     </p>
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary wow flipInX" data-wow-duration="1s" data-wow-delay="200ms">
                         <i class="fi-social-linkedin"></i>
                         LinkedIn
+                    </button>
+                    <button class="btn btn-primary wow flipInX" data-wow-duration="1s" data-wow-delay="200ms">
+
+                        <i class="fi-social-github"></i>
+                        <a href="https://github.com/Miniplop">GitHub</a>
                     </button>
                 </div>
             </div>
@@ -468,97 +390,31 @@
 </div>
 <!-- #END CV SECTION -->
 
-<!-- CONTACT ME SECTION -->
-<div class="section" id="contact-me-section">
-    <div class="container">
-        <div class="section-title">
-            <div class="title">
-                <h1>Contact Me</h1>
-            </div>
-            <h3>Let's be friend</h3>
-        </div>
-        <div class="section-content">
-            <form data-toggle="validator">
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-3">
-                            <label for="exampleInputEmail1">Name*</label>
-                            <input id="mail_author" data-minlength="3" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
-                        </div>
-                        <div class="col-md-3">
-                            <label for="exampleInputPassword1">Email* </label>
-                            <input id="mail_sender" type="email" class="form-control" id="exampleInputPassword1" placeholder="Your Email">
-                            <span class="help-block with-errors"></span>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-md-offset-2  col-md-8">
-                            <label for="exampleInputFile">Message*</label>
-                            <textarea class="form-control" rows="5" id="mail_content" placeholder="Your Message"></textarea>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="">
-                    <div type="submit" class="submit-button">
-                        <a class="btn btn-lg" onclick="sendMail(); return false" data-toggle="modal" data-target="#myModal" >
-                            Send Message
-                        </a>
-                    </div>
-                </div>
-            </form>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-<!-- #END CONTACT ME SECTION -->
-
 
 <!-- FOOTER SECTION -->
 <div class="section" id="footer-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-offset-4 col-md-4 social-wrapper">
-                <a href="http://skype.com">
-                    <div class="box-social box-social-skype">
-                        <i class="fi-social-skype"></i>
-                    </div>
-                </a>
+            <div class="col-md-offset-4 col-md-4 social-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="200ms">
+
                 <div class="box-social box-social-mail">
-                    <i class="fi-mail"></i>
+                    <a href="mailto:kevin.jean@ensimag.grenoble-inp.fr">
+                        <i class="fi-mail"></i>
+                    </a>
                 </div>
                 <div class="box-social box-social-linkedin">
-                    <i class="fi-social-linkedin"></i>
+                    <a href="https://fr.linkedin.com/in/kévin-jean-054639aa">
+                        <i class="fi-social-linkedin"></i>
+                    </a>
+                </div>
+                <div class="box-social box-social-github">
+                    <a href="https://github.com/Miniplop">
+                        <i class="fi-social-github"></i>
+                    </a>
                 </div>
             </div>
-
         </div>
-        <div class="row"></div>
-        <div class="col-md-12" id="copyright">
+        <div class="col-md-12 wow fadeInUp" id="copyright" data-wow-duration="1s" data-wow-delay="200ms">
             ©2015 Kévin Jean. All rights reserved.
         </div>
     </div>
@@ -574,8 +430,9 @@
 <script src="{{asset('/bower_components/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
 <script src="{{asset('/bower_components/vertical-timeline/js/main.js')}}"></script>
-<script src="{{asset('/bower_components/slick/slick/slick.min.js')}}"></script>
+<script src="{{asset('/bower_components/owl-carousel/owl.carousel.js')}}"></script>
 <script src="{{asset('/bower_components/bootstrap-validator/js/validator.js')}}"></script>
+<script src="{{asset('/bower_components/WOW/dist/wow.min.js')}}"></script>
 
 <!-- SCRIPT JAVASCRIPT -->
 <script src="{{asset('/js/main.js')}}"></script>

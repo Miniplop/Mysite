@@ -19,14 +19,22 @@ p,span,a {
   font-family: 'Karma', serif;
 }
 
+p{
+  text-align:justify;
+}
 p a{
   color: #C03B44 ;
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
 }
-a:visited{
-  color: #000000;
+
+button a{
+  color: white;
+}
+
+button a:hover{
+  color: white;
 }
 
 input, textarea{

@@ -1,11 +1,20 @@
 
 
+
+$(".box-social").hover(
+    function() {
+        $( this ).addClass("infinite  swing animated");
+    }, function() {
+        $( this ).removeClass("infinite  swing animated");
+    }
+);
+
 //these options are common to all skills
 var options = {
 
     //prevents the text vanishing on redraw (when tooltip shows on hover)
     showTooltips: false,
-
+    responsive:true,
     segmentShowStroke : false,
     percentageInnerCutout : 80,
 
@@ -40,56 +49,40 @@ var options = {
     }
 };
 
-function sendMail() {
 
-    var email = $("#mail_sender").val();
-    var name = $("#mail_author").val();
-    var content = $("#mail_content").val();
+new WOW().init();
 
-    var Info = {
-        name: name,
-        email: email,
-        body: content
-    };
-
-    console.log(Info);
-
-    $.ajax({
-        type: "POST",
-        url: "/mail",
-        dataType: "json",
-        success: function (msg) {
-            if (msg) {
-                alert("Somebody send a msg !");
-                location.reload(true);
-            } else {
-                alert("Cannot add to list !");
-            }
-        },
-        data: Info
-    });
+window.onbeforeunload = function(){
+    window.scrollTo(0,0);
 }
 
 
+$(window).bind("load", function() {
+    $('body').addClass('loaded');
+});
 
 
 $(document).ready(function() {
 
-    // Loading Screen
-    setTimeout(function(){
-        $('body').addClass('loaded');
-    }, 1000);
+    //Scroll animation
+    $('#header-section a, #button-myservice a').click(function(){
+        var scroll_start =  $(document).scrollTop();
+        var height = $( $.attr(this, 'href') ).offset().top - scroll_start;
+        height = height<0?height*(-1):height;
 
-    $('#header-section a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 1000);
+    }, 250+height*0.5 >2500? 2500:250+height*0.5 );
         return false;
     });
 
     // Chart.js
 
-    $(".skill-description").width( $('.skill').width());
+
+
+    $('#Myskills').owlCarousel({
+        items:3
+    });
 
     //cycle through each skill
     $('.skill').each(function () {
@@ -111,19 +104,11 @@ $(document).ready(function() {
         //now draw the chart on this skill canvas with the custom data set
         var ctx = $(this).get(0).getContext("2d");
         chart = new Chart(ctx).Doughnut(data, options);
-    });
 
-    $('.skill-carousel').slick({
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            arrows: true
-        }
-    );
-
-    // Calcul des paddings dans les slides pour aligner le contenu
-    $(".slick-slide").each(function(){
-        $(this).children().css("padding-left",($(this).width()-$('.skill').width())/2);
+        // Calcul des paddings dans les slides pour aligner le contenu
+        $(".slick-slide").each(function(){
+            $(this).children().css("padding-left",($(this).width()-$('.skill').width())/2);
+        });
     });
 
     // Resize window
@@ -137,11 +122,6 @@ $(document).ready(function() {
         $("#home-container").css("padding-top",height/2.5);
     });
 
-
-
-
-    // Scroll animation
-    window.scrollTo(0, 0);
 
     $(document).scroll(function() {
         var scroll_start = $(this).scrollTop();

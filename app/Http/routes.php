@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 });
 
-Route::post('mail','MailController@sendEmail');
+Route::post('mail','MailController@getContactUsForm');
